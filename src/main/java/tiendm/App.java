@@ -40,7 +40,7 @@ public class App
         	  .setRestBaseURL("https://graph.facebook.com/v2.3/")
         	  .setOAuthAppId("2690")
         	  .setOAuthAppSecret("tiendm")
-        	  .setOAuthAccessToken("EAACEdEose0cBAO2me03Mxpb4x8GOcbaEMjLMdxeumYqXgOTKXc0vQAV7I2Vo8AqdEDaMbzKCP5ndMR1twJDqlGGgdbSVKS2JQhxg5nvZA5yUjE0QudcgO1c67rsFjRAWz5Ls4ypMsggDk1lSGOSshHNBeRq9ZAXgSE2dKw79wVBxNT8PCZA16AalcH9A8EZD")
+        	  .setOAuthAccessToken("EAACEdEose0cBAHUVRbLVsgq02DGBV3d4u5xuXZBhKPSreLFScZAwIA4XORTZBLyJuJvpeghZAop1m9LDxkFZC3wlUMn6y3gpaoJ1DiGxolEeFKRPSs6S8u3Aduo0hpe5uG9dumDlM6vXkcvSFjZCK2rPJgJSgdjZABIWWzbymkVeZCHn8JjU117BWIly5KZAVB0wZD")
         	  .setOAuthPermissions(PERMISSION);
         	FacebookFactory ff = new FacebookFactory(cb.build());
         	Facebook facebook = ff.getInstance();
