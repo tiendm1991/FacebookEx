@@ -14,7 +14,7 @@ public class FacebookUtil {
 	public static void main(String[] args) {
 		try {
 			List<User> lsMutual = getMutualFriend("C:\\Users\\TienDM\\Desktop\\fb\\0.html",
-													"C:\\Users\\TienDM\\Desktop\\fb\\2.html");
+													"C:\\Users\\TienDM\\Desktop\\fb\\1.html");
 			int i=0;
 			Collections.sort(lsMutual);
 			for (User user : lsMutual) {
