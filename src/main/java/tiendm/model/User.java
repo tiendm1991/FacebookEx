@@ -1,4 +1,4 @@
-package tiendm.jsoup;
+package tiendm.model;
 
 public class User implements Comparable<User>{
 	private String id;

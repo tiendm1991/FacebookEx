@@ -10,6 +10,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import tiendm.model.User;
+import tiendm.util.CollectionUtil;
+import tiendm.util.FileUtil;
+import tiendm.util.StringUtil;
+
 public class FacebookUtil {
 	public static void main(String[] args) {
 		try {

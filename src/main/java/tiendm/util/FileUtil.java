@@ -1,11 +1,11 @@
-package tiendm.jsoup;
+package tiendm.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
 public class FileUtil {
-	static String readFile(String path) throws IOException{
+	public static String readFile(String path) throws IOException{
 		StringBuilder str = new StringBuilder("");
 		BufferedReader br = null; 
 		try {

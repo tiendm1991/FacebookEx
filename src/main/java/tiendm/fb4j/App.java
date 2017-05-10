@@ -1,4 +1,4 @@
-package tiendm;
+package tiendm.fb4j;
 
 import facebook4j.Facebook;
 import facebook4j.FacebookException;

@@ -1,4 +1,4 @@
-package tiendm.jsoup;
+package tiendm.util;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package tiendm.jsoup;
+package tiendm.util;
 
 import java.math.BigDecimal;
 import java.security.MessageDigest;
