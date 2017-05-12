@@ -4,7 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
+import org.jsoup.Connection;
+import org.jsoup.Connection.Method;
+import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -18,13 +22,17 @@ import tiendm.util.StringUtil;
 public class FacebookUtil {
 	public static void main(String[] args) {
 		try {
-			List<User> lsMutual = getMutualFriend("C:\\Users\\TienDM\\Desktop\\fb\\0.html",
-													"C:\\Users\\TienDM\\Desktop\\fb\\1.html");
-			int i=0;
-			Collections.sort(lsMutual);
-			for (User user : lsMutual) {
-				System.out.println((++i) + ": "+user);
-			}
+			List<User> ls = crawlWithLogin("https://www.facebook.com/login.php?login_attempt=1", 
+					"https://www.facebook.com/caothu.bk",
+					"caothubk11291@gmail.com", "MANHTIEN26908711");
+			
+//			List<User> lsMutual = getMutualFriend("C:\\Users\\TienDM\\Desktop\\fb\\0.html",
+//													"C:\\Users\\TienDM\\Desktop\\fb\\1.html");
+//			int i=0;
+//			Collections.sort(lsMutual);
+//			for (User user : lsMutual) {
+//				System.out.println((++i) + ": "+user);
+//			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -53,4 +61,23 @@ public class FacebookUtil {
 		}
 		return ls;
 	}
+	
+	
+	public static List<User> crawlWithLogin(String urlLogin, String url, String user, String pass) throws IOException{
+		String user_agent = "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36";
+		Response login = Jsoup.connect(urlLogin)
+							.userAgent(user_agent)
+//				 			.data("ctl00$cLogIn1$tb_cLogIn_User", user).data("ctl00$cLogIn1$tb_cLogIn_Pass", pass)
+				 			.data("email", user).data("pass", pass)
+				 			.method(Method.POST)
+				 			.userAgent(user_agent).execute();
+		Document document = login.parse();
+		System.out.println(document);
+		Document doc = Jsoup.connect(url).cookies(login.cookies()).get();
+		List<User> ls = new ArrayList<>();
+		Elements elements = doc.getElementsByTag("a");
+		return ls;
+	}
+	
+	
 }
