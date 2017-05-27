@@ -22,17 +22,17 @@ import tiendm.util.StringUtil;
 public class FacebookUtil {
 	public static void main(String[] args) {
 		try {
-			List<User> ls = crawlWithLogin("https://www.facebook.com/login.php?login_attempt=1", 
-					"https://www.facebook.com/caothu.bk",
-					"caothubk11291@gmail.com", "MANHTIEN26908711");
+//			List<User> ls = crawlWithLogin("https://www.facebook.com/login.php?login_attempt=1", 
+//					"https://www.facebook.com/caothu.bk",
+//					"caothubk11291@gmail.com", "MANHTIEN26908711");
 			
-//			List<User> lsMutual = getMutualFriend("C:\\Users\\TienDM\\Desktop\\fb\\0.html",
-//													"C:\\Users\\TienDM\\Desktop\\fb\\1.html");
-//			int i=0;
-//			Collections.sort(lsMutual);
-//			for (User user : lsMutual) {
-//				System.out.println((++i) + ": "+user);
-//			}
+			List<User> lsMutual = getMutualFriend("C:\\Users\\TienDM\\Desktop\\fb\\0.html",
+													"C:\\Users\\TienDM\\Desktop\\fb\\2.html");
+			int i=0;
+			Collections.sort(lsMutual);
+			for (User user : lsMutual) {
+				System.out.println((++i) + ": "+user);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
