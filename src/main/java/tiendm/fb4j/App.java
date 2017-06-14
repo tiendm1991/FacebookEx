@@ -1,4 +1,4 @@
-package tiendm;
+package tiendm.fb4j;
 
 import facebook4j.Facebook;
 import facebook4j.FacebookException;
@@ -40,11 +40,12 @@ public class App
         	  .setRestBaseURL("https://graph.facebook.com/v2.3/")
         	  .setOAuthAppId("2690")
         	  .setOAuthAppSecret("tiendm")
-        	  .setOAuthAccessToken("EAACEdEose0cBAO2me03Mxpb4x8GOcbaEMjLMdxeumYqXgOTKXc0vQAV7I2Vo8AqdEDaMbzKCP5ndMR1twJDqlGGgdbSVKS2JQhxg5nvZA5yUjE0QudcgO1c67rsFjRAWz5Ls4ypMsggDk1lSGOSshHNBeRq9ZAXgSE2dKw79wVBxNT8PCZA16AalcH9A8EZD")
+        	  .setOAuthAccessToken("EAACEdEose0cBAAjr0NUgl4V6gBYP8EnnvZCn44hAwob6UMBEpVwxEUZC0C7QczcKiU5SZBiSe057BxgUWt14RvUZAdnHjtZBuwL19hZBPavXLTd8UzZAj3yDX3W1ovhqaCC4b1sVssZAJiFCcXZB6HRQhSwldP7NpwAmB5PMZB1HeEAigXHM5rWJAKvZCpH50SftioZD")
         	  .setOAuthPermissions(PERMISSION);
         	FacebookFactory ff = new FacebookFactory(cb.build());
         	Facebook facebook = ff.getInstance();
 	        ResponseList<Friend> friend = facebook.getFriends(new Reading().fields("id","name"));
+	        System.out.println(friend);
 		} catch (FacebookException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
