@@ -26,8 +26,8 @@ public class FacebookUtil {
 //					"https://www.facebook.com/caothu.bk",
 //					"caothubk11291@gmail.com", "MANHTIEN26908711");
 			
-			List<User> lsMutual = getMutualFriend("C:\\Users\\TienDM\\Desktop\\fb\\0.html",
-													"C:\\Users\\TienDM\\Desktop\\fb\\2.html");
+			List<User> lsMutual = getMutualFriend("C:\\Users\\TienDM\\Desktop\\facebook_test\\0.html",
+													"C:\\Users\\TienDM\\Desktop\\facebook_test\\3.html");
 			int i=0;
 			Collections.sort(lsMutual);
 			for (User user : lsMutual) {
