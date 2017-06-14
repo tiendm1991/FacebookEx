@@ -45,7 +45,6 @@ public class App
         	FacebookFactory ff = new FacebookFactory(cb.build());
         	Facebook facebook = ff.getInstance();
 	        ResponseList<Friend> friend = facebook.getFriends(new Reading().fields("id","name"));
-	        System.out.println(friend);
 		} catch (FacebookException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
