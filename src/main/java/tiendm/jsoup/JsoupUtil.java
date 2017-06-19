@@ -18,6 +18,17 @@ import org.jsoup.select.Elements;
 
 public class JsoupUtil {
 	public static void main(String[] args) {
+		String s = "<html> "
+					+ "<body>"
+						+ "<div> xbcasdmildvnkcvdljvnlkdfndnfirngm,dfmvldfnoi"
+						+ "</div>"
+						+ "<span> 1231646431646545645612313545456231545656152"
+						+ "</span>"
+					+ "</body>"
+				+ "</html>";
+		Element node = Jsoup.parse(s).getElementsByTag("span").first();
+		String text = node.text();
+		System.out.println(text);
 	}
 	
 	
